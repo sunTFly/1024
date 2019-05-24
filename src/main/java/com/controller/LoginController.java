@@ -26,7 +26,6 @@ public class LoginController extends HttpServlet {
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		// 测试
-		//req.setAttribute("testservlet", "测试成功");
 		String name = req.getParameter("uname");
 		String pwd = req.getParameter("upwd");
 
@@ -35,6 +34,7 @@ public class LoginController extends HttpServlet {
 		if(!flag) {
 			req.getRequestDispatcher("faile.jsp").forward(req, resp);
 		}else {
+			req.getSession().setAttribute("login", true);
 			req.getRequestDispatcher("success.jsp").forward(req, resp);
 		}
 		

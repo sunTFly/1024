@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 </head>
-<body>
-用户密码验证失败
+<body> 
+失败
 </body>
 </html>

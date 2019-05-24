@@ -10,7 +10,7 @@ public class loginService {
 	public boolean login(String uname, String upwd) {
 		boolean flag = false;
 		try {
-			String sql = "select * from testtable where name=? and password=?";
+			String sql = "select * from user where name=? and password=?";
 			Connection conn = JDBCUntil.getConnection();
 			// sql注入
 			PreparedStatement pst = conn.prepareStatement(sql);
@@ -24,7 +24,6 @@ public class loginService {
 		} catch (Exception e) {
 			// TODO: handle exception
 		}
-		System.out.println(flag);
 		return flag;
 	}
 }

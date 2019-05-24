@@ -3,7 +3,7 @@
   <welcome-file-list>
     <welcome-file>index.html</welcome-file>
     <welcome-file>index.htm</welcome-file>
-    <welcome-file>demo1.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
     <welcome-file>default.html</welcome-file>
     <welcome-file>default.htm</welcome-file>
     <welcome-file>index.jsp</welcome-file>
@@ -16,5 +16,21 @@
    <servlet-mapping>
    	 <servlet-name>fromLogin</servlet-name>
    	 <url-pattern>/fromLogin</url-pattern>
+   </servlet-mapping>
+   <servlet>
+   	 <servlet-name>listUser</servlet-name>
+   	 <servlet-class>com.controller.UserController</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	 <servlet-name>listUser</servlet-name>
+   	 <url-pattern>/listUser</url-pattern>
+   </servlet-mapping>
+    <servlet>
+   	 <servlet-name>menu</servlet-name>
+   	 <servlet-class>com.controller.MenuController</servlet-class>
+   </servlet>
+   <servlet-mapping>
+   	 <servlet-name>menu</servlet-name>
+   	 <url-pattern>/showMenus</url-pattern>
    </servlet-mapping>
 </web-app>
